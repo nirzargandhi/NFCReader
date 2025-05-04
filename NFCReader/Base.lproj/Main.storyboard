@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bTc-Ub-WHH">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--HomeVC-->
+        <scene sceneID="JeE-u2-nSp">
+            <objects>
+                <viewController storyboardIdentifier="HomeVC" id="bTc-Ub-WHH" customClass="HomeVC" customModule="NFCReader" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9yY-vk-2wy">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="trp-3f-SJL">
+                                <rect key="frame" x="20" y="40" width="335" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="g7Z-Dw-8I7"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Message" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="VHv-u8-F5I">
+                                <rect key="frame" x="20" y="110" width="335" height="467"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="eqi-KL-sVC">
+                                <rect key="frame" x="20" y="597" width="335" height="50"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rOT-s2-YVl">
+                                        <rect key="frame" x="0.0" y="0.0" width="98.5" height="50"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Read"/>
+                                        <connections>
+                                            <action selector="readBtnTouch:" destination="bTc-Ub-WHH" eventType="touchUpInside" id="pU9-4i-y4o"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2pP-pv-JDO">
+                                        <rect key="frame" x="118.5" y="0.0" width="98" height="50"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Write"/>
+                                        <connections>
+                                            <action selector="writeBtnTouch:" destination="bTc-Ub-WHH" eventType="touchUpInside" id="S0S-FT-V9o"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xa6-CQ-mtc">
+                                        <rect key="frame" x="236.5" y="0.0" width="98.5" height="50"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Clear"/>
+                                        <connections>
+                                            <action selector="clearBtnTouch:" destination="bTc-Ub-WHH" eventType="touchUpInside" id="qWj-jn-Cpa"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="uQx-WX-yWa"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Plu-OZ-axf"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="VHv-u8-F5I" firstAttribute="leading" secondItem="9yY-vk-2wy" secondAttribute="leading" constant="20" id="78h-0B-zFb"/>
+                            <constraint firstItem="trp-3f-SJL" firstAttribute="top" secondItem="Plu-OZ-axf" secondAttribute="top" constant="20" id="8IY-WH-wxP"/>
+                            <constraint firstItem="VHv-u8-F5I" firstAttribute="top" secondItem="trp-3f-SJL" secondAttribute="bottom" constant="20" id="C7p-fU-vWI"/>
+                            <constraint firstAttribute="trailing" secondItem="VHv-u8-F5I" secondAttribute="trailing" constant="20" id="E7h-N1-8lE"/>
+                            <constraint firstAttribute="bottom" secondItem="eqi-KL-sVC" secondAttribute="bottom" constant="20" id="H6s-wm-6RR"/>
+                            <constraint firstItem="eqi-KL-sVC" firstAttribute="leading" secondItem="9yY-vk-2wy" secondAttribute="leading" constant="20" id="TJL-VE-CS2"/>
+                            <constraint firstItem="eqi-KL-sVC" firstAttribute="top" secondItem="VHv-u8-F5I" secondAttribute="bottom" constant="20" id="b94-vC-izM"/>
+                            <constraint firstAttribute="trailing" secondItem="trp-3f-SJL" secondAttribute="trailing" constant="20" id="bxh-1F-3I3"/>
+                            <constraint firstItem="trp-3f-SJL" firstAttribute="leading" secondItem="9yY-vk-2wy" secondAttribute="leading" constant="20" id="f8r-Je-lGw"/>
+                            <constraint firstAttribute="trailing" secondItem="eqi-KL-sVC" secondAttribute="trailing" constant="20" id="mj4-1t-kpy"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="buttonStackView" destination="eqi-KL-sVC" id="jj8-NL-RBa"/>
+                        <outlet property="clearBtn" destination="Xa6-CQ-mtc" id="oVo-hc-dFe"/>
+                        <outlet property="detectMessageTxtView" destination="VHv-u8-F5I" id="RbW-h2-nEo"/>
+                        <outlet property="messageTF" destination="trp-3f-SJL" id="LDj-ov-Hng"/>
+                        <outlet property="readBtn" destination="rOT-s2-YVl" id="ODZ-sG-7t8"/>
+                        <outlet property="writeBtn" destination="2pP-pv-JDO" id="fx1-LP-LEC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SIN-Am-GcJ" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="132" y="-55"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

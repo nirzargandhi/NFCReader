@@ -16,8 +16,6 @@
 		127817AF2D9FC7F5004FCB99 /* BaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 127817AE2D9FC7F5004FCB99 /* BaseVC.swift */; };
 		127817B12D9FC859004FCB99 /* NFCReaderExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 127817B02D9FC859004FCB99 /* NFCReaderExtensions.swift */; };
 		127817B62D9FC928004FCB99 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 127817B52D9FC928004FCB99 /* HomeVC.swift */; };
-		127817B92D9FC97C004FCB99 /* HomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 127817B72D9FC97C004FCB99 /* HomeCell.swift */; };
-		127817BA2D9FC97C004FCB99 /* HomeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 127817B82D9FC97C004FCB99 /* HomeCell.xib */; };
 		127817BD2D9FD782004FCB99 /* NFCReaderManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 127817BC2D9FD782004FCB99 /* NFCReaderManager.swift */; };
 /* End PBXBuildFile section */
 
@@ -46,8 +44,6 @@
 		127817AE2D9FC7F5004FCB99 /* BaseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseVC.swift; sourceTree = "<group>"; };
 		127817B02D9FC859004FCB99 /* NFCReaderExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NFCReaderExtensions.swift; sourceTree = "<group>"; };
 		127817B52D9FC928004FCB99 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
-		127817B72D9FC97C004FCB99 /* HomeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCell.swift; sourceTree = "<group>"; };
-		127817B82D9FC97C004FCB99 /* HomeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeCell.xib; sourceTree = "<group>"; };
 		127817BC2D9FD782004FCB99 /* NFCReaderManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NFCReaderManager.swift; sourceTree = "<group>"; };
 		127817BE2D9FED84004FCB99 /* NFCReader.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = NFCReader.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -82,8 +78,8 @@
 		1278179B2D9FC6C6004FCB99 /* NFCReader */ = {
 			isa = PBXGroup;
 			children = (
-				127817BE2D9FED84004FCB99 /* NFCReader.entitlements */,
 				127817AD2D9FC7C3004FCB99 /* Classes */,
+				127817BE2D9FED84004FCB99 /* NFCReader.entitlements */,
 				127817A32D9FC6DE004FCB99 /* Storyboards */,
 				127817AB2D9FC7AB004FCB99 /* Utilities */,
 			);
@@ -157,19 +153,9 @@
 		127817B22D9FC8E5004FCB99 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				127817B32D9FC8F1004FCB99 /* Cell */,
 				127817B42D9FC8F7004FCB99 /* Controller */,
 			);
 			name = Home;
-			sourceTree = "<group>";
-		};
-		127817B32D9FC8F1004FCB99 /* Cell */ = {
-			isa = PBXGroup;
-			children = (
-				127817B72D9FC97C004FCB99 /* HomeCell.swift */,
-				127817B82D9FC97C004FCB99 /* HomeCell.xib */,
-			);
-			name = Cell;
 			sourceTree = "<group>";
 		};
 		127817B42D9FC8F7004FCB99 /* Controller */ = {
@@ -252,7 +238,6 @@
 			files = (
 				1278179F2D9FC6C6004FCB99 /* Assets.xcassets in Resources */,
 				127817A12D9FC6C6004FCB99 /* LaunchScreen.storyboard in Resources */,
-				127817BA2D9FC97C004FCB99 /* HomeCell.xib in Resources */,
 				127817A22D9FC6C6004FCB99 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -265,7 +250,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				1278179C2D9FC6C6004FCB99 /* AppDelegate.swift in Sources */,
-				127817B92D9FC97C004FCB99 /* HomeCell.swift in Sources */,
 				127817AA2D9FC73C004FCB99 /* Common.swift in Sources */,
 				127817A72D9FC719004FCB99 /* Constants.swift in Sources */,
 				127817B62D9FC928004FCB99 /* HomeVC.swift in Sources */,
@@ -309,6 +293,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = "";
 				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = "";
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = NFCReader/Info.plist;
 				INFOPLIST_KEY_NFCReaderUsageDescription = "We use NFC to scan tag and passing information";
@@ -350,6 +335,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = "";
 				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = "";
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = NFCReader/Info.plist;
 				INFOPLIST_KEY_NFCReaderUsageDescription = "We use NFC to scan tag and passing information";
